@@ -1,0 +1,56 @@
+name: Update README with latest repos
+
+on:
+  schedule:
+    - cron: '0 */8 * * *'  # This runs every 8 hours
+  workflow_dispatch:     # allows manual trigger
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      # Fetch recent repositories and their descriptions
+      - name: Fetch recent repositories and their descriptions
+        id: repos
+        run: |
+          # Fetch latest repositories and descriptions
+          repos=$(curl -s "https://api.github.com/users/michyelle/repos?per_page=5&sort=updated" | jq -r '.[].name')
+          descriptions=$(curl -s "https://api.github.com/users/michyelle/repos?per_page=5&sort=updated" | jq -r '.[].description')
+
+          # Prepare the new repo list in table format
+          repo_list=""
+          counter=0
+          for repo in $repos; do
+            description=$(echo "$descriptions" | sed -n "${counter}p")
+            repo_list+="| [$repo](https://github.com/michyelle/$repo) | $description |\n"
+            counter=$((counter + 1))
+          done
+          
+          # Save the new list in a temporary file
+          echo "$repo_list" > repos_list.txt
+
+      # Compare with existing README
+      - name: Compare with existing README
+        id: compare
+        run: |
+          # Extract the current repo list from README
+          current_repos=$(sed -n '/<!--START_SECTION:repos-->/, /<!--END_SECTION:repos-->/p' README.md)
+          new_repos=$(cat repos_list.txt)
+
+          # Check if there's a change between current and new repos
+          if [ "$current_repos" != "$new_repos" ]; then
+            echo "New repos detected, updating README..."
+            echo "NEW_REPOS=true" >> $GITHUB_ENV
+          else
+            echo "No new repos, skipping update."
+            echo "false" >> $GITHUB_ENV
+          fi
+
+      # Update README if there are new repos
+      - name: Update README with repos
+        if: env.NEW_REPOS == 'true'  # Only update if there are new repos
+        run: |
+          REPOS=$(cat repos_list.txt)
+          sed -i '/<!--START_SECTION:repos-->/, /<!--END_SECTION:repos-->/c\<!--START_SECTION:repos-->\n'"$REPOS"'\n<!--END_SECTION:repos-->' README.md
