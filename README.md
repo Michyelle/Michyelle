@@ -1,21 +1,12 @@
-
-
 <img src="banner.gif" alt="Animated Banner" style="width: 100%; height: auto;" />
 
+# Michelle Nguyen - Software Engineer
+### 🌱 Becoming the person I needed when I was younger - one commit at a time
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start;">
- <div style="flex: 1; margin-right: 20px;">
- <h1 style="font-size: 2em; margin: 0;">Michelle Nguyen - Software Engineer</h1>
- <p style="font-size: 1em; margin: 10px 0 0 0;">🌱 Becoming the person I needed when I was younger - one commit at a time</p>
- </div>
-
- <div style="flex: 1; text-align: center;">
- <label style="font-size: 1em; font-weight: bold; margin-bottom: 10px; display: block;">Currently Listening To:</label>
- <a href="https://github.com/kittinan/spotify-github-profile">
-  <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=1229106751&cover_image=true&theme=novatorem&show_offline=true&background_color=000000&interchange=false&bar_color=ffe4e1&bar_color_cover=false" alt="spotify-github-profile" />
- </a>
- </div>
-</div>
+Currently Listening To:
+<a href="https://github.com/kittinan/spotify-github-profile">
+<img src="https://spotify-github-profile.kittinanx.com/api/view?uid=1229106751&cover_image=true&theme=novatorem&show_offline=true&background_color=000000&interchange=false&bar_color=ffe4e1&bar_color_cover=false" alt="spotify-github-profile" />
+</a>
 
 <a href="https://github.com/Michyelle" target="_blank">
  <img src="https://img.shields.io/badge/GitHub-@Michyelle-ffe4e1?logo=github&style=for-the-badge&labelColor=b79ea1"/>
@@ -46,24 +37,23 @@
 
 ---
 
-<div style="display: inline-block; width: 48%; vertical-align: top; padding-right: 10px;">
- <img src="me.svg" width="350" height="550" alt="Michelle ASCII portrait"/>
+ <img align="left" src="me.png" width="350" height="550" alt="Michelle ASCII portrait"/>
 
  <h3>Featured Projects</h3>
- <table style="border-collapse: collapse; width: 100%; background-color: #f8f9fa;">
-  <tr style="background-color: #b79ea1; color: white;">
+ <table>
+  <tr>
    <th>Project</th>
    <th>Description</th>
   </tr>
-  <tr style="background-color: #ffe4e1;">
+  <tr>
    <td><strong>Project One</strong></td>
    <td>Short description about your current project.</td>
   </tr>
-  <tr style="background-color: #f1dcda;">
+  <tr>
    <td><strong>Project Two</strong></td>
    <td>Short description about your second project.</td>
   </tr>
-  <tr style="background-color: #ffe4e1;">
+  <tr>
    <td><strong>Project Three</strong></td>
    <td>Short description about your second project.</td>
   </tr>
@@ -76,10 +66,8 @@
  | ------- | ----------- |
  <!--END_SECTION:repos-->
 
-</div>
 
 
-<div style="display: inline-block; width: 48%; vertical-align: top;">
   <h3>About Me</h3>
   <ul>
     <li>🎓 B.S. in Computer Science from CSUF</li>
@@ -145,7 +133,6 @@
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Selenium" width=" 40" height="40" />
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="Selenium" width=" 40" height="40" />
   </p>
-</div>
 
 
 ---
