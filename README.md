@@ -182,7 +182,7 @@ Currently Listening To:
 
 ### Employer?
 > [!IMPORTANT]  
-> 📄 [View My Résumé](resume.pdf)
+> 📄 [View My Resume](resume.pdf)
 
 <a href="resume.pdf" target="_blank">
   <img src="https://img.shields.io/badge/Resume-Download-ffe4e1?style=for-the-badge&logo=adobeacrobatreader&logoColor=white&labelColor=b79ea1" alt="Resume Badge"/>
