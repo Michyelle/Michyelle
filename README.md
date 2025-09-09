@@ -61,13 +61,6 @@ Currently Listening To:
   </tr>
  </table>
 
- <h3>🚀 Latest Projects</h3>
- 
- <!--START_SECTION:repos-->
- | Project | Description |
- | ------- | ----------- |
- <!--END_SECTION:repos-->
-
  <img align="right" src="me.png" width="350" height="550" alt="Michelle ASCII portrait"/>
 
   <h3>About Me</h3>
