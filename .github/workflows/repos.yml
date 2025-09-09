@@ -2,8 +2,8 @@ name: Update README with latest repos
 
 on:
   schedule:
-    - cron: '0 */8 * * *'  # This runs every 8 hours
-  workflow_dispatch:     # allows manual trigger
+    - cron: "0 */8 * * *"   # every 8 hours
+  workflow_dispatch:
 
 jobs:
   update-readme:
@@ -11,46 +11,28 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      # Fetch recent repositories and their descriptions
-      - name: Fetch recent repositories and their descriptions
-        id: repos
+      - name: Fetch latest repositories
+        id: fetch
         run: |
-          # Fetch latest repositories and descriptions
-          repos=$(curl -s "https://api.github.com/users/michyelle/repos?per_page=5&sort=updated" | jq -r '.[].name')
-          descriptions=$(curl -s "https://api.github.com/users/michyelle/repos?per_page=5&sort=updated" | jq -r '.[].description')
+          echo "REPOS_TABLE=$(curl -s "https://api.github.com/users/Michyelle/repos?per_page=5&sort=updated" \
+            | jq -r '.[] | "| [\(.name)](https://github.com/Michyelle/\(.name)) | \(.description // "-") |"' \
+            | tr '\n' '§')" >> $GITHUB_ENV
 
-          # Prepare the new repo list in table format
-          repo_list=""
-          counter=0
-          for repo in $repos; do
-            description=$(echo "$descriptions" | sed -n "${counter}p")
-            repo_list+="| [$repo](https://github.com/michyelle/$repo) | $description |\n"
-            counter=$((counter + 1))
-          done
-          
-          # Save the new list in a temporary file
-          echo "$repo_list" > repos_list.txt
-
-      # Compare with existing README
-      - name: Compare with existing README
-        id: compare
+      - name: Update README
         run: |
-          # Extract the current repo list from README
-          current_repos=$(sed -n '/<!--START_SECTION:repos-->/, /<!--END_SECTION:repos-->/p' README.md)
-          new_repos=$(cat repos_list.txt)
+          repos=$(echo "$REPOS_TABLE" | tr '§' '\n')
 
-          # Check if there's a change between current and new repos
-          if [ "$current_repos" != "$new_repos" ]; then
-            echo "New repos detected, updating README..."
-            echo "NEW_REPOS=true" >> $GITHUB_ENV
+          # Replace section in README
+          sed -i "/<!--START_SECTION:repos-->/,/<!--END_SECTION:repos-->/c\<!--START_SECTION:repos-->\n| Project | Description |\n| ------- | ----------- |\n$repos\n<!--END_SECTION:repos-->" README.md
+
+      - name: Commit changes
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "chore: update latest repos"
+            git push
           else
-            echo "No new repos, skipping update."
-            echo "false" >> $GITHUB_ENV
+            echo "No changes to commit"
           fi
-
-      # Update README if there are new repos
-      - name: Update README with repos
-        if: env.NEW_REPOS == 'true'  # Only update if there are new repos
-        run: |
-          REPOS=$(cat repos_list.txt)
-          sed -i '/<!--START_SECTION:repos-->/, /<!--END_SECTION:repos-->/c\<!--START_SECTION:repos-->\n'"$REPOS"'\n<!--END_SECTION:repos-->' README.md
