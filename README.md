@@ -182,7 +182,7 @@ Currently Listening To:
 
 ### Employer?
 > [!IMPORTANT]  
-📄 [View My Resume](https://github.com/Michyelle/MichelleNguyenResume.pdf)
+📄 [View My Resume](https://drive.google.com/file/d/11vufHrihALkUjJbXe8sLFUsmTj0HF3Tr/view?usp=sharing)
 
 
 <a href="https://github.com/Michyelle/Michyelle/raw/main/MichelleNguyenResume.pdf" target="_blank">
