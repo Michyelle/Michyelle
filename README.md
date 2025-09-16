@@ -182,12 +182,9 @@ Currently Listening To:
   <img src="https://img.shields.io/badge/Resume-Download-ffe4e1?style=for-the-badge&logo=adobeacrobatreader&logoColor=white&labelColor=b79ea1" alt="Resume Badge"/>
 </a>
 
----
 
 <p align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=Michyelle.Michyelle" alt="Visitor Badge"/>
-  <br><br>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Michyelle&theme=default&background=b79ea1&fire=ffe4e1&ring=ffe4e1&currStreakNum=ffe4e1&sideNums=ffe4e1&currStreakLabel=ffe4e1&sideLabels=ffe4e1&dates=ffffff" alt="GitHub Streak"/>
 </p>
 
 <img src="footer.gif" alt="Animated Footer" style="width: 100%; height: auto;" />
