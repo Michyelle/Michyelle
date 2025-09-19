@@ -50,17 +50,17 @@ Currently Listening To:
    <th>Description</th>
   </tr>
   <tr>
-   <td><strong>Personal Portfolio</strong></td>
+   <td><a href="http://michellenguyen.vercel.app/" target="_blank"><strong>Personal Portfolio</strong></a></td>
    <td>A custom-built portfolio site to showcase my work, skills, and creative projects. Designed with a clean aesthetic and responsive layout.
 </td>
   </tr>
   <tr>
-   <td><strong>Instagram DM Analyzer</strong></td>
+   <td><a href="https://igdmdata.vercel.app/" target="_blank"><strong>Instagram DM Analyzer</strong></a></td>
    <td>A client-side tool that processes exported Instagram DM data to generate insights and summaries. No data is stored, ensuring privacy and security.
 </td>
   </tr>
   <tr>
-   <td><strong>React + Flask Practice</strong></td>
+   <td><a href="https://github.com/Michyelle/PracticingReactAndFlask" target="_blank"><strong>React + Flask Practice</strong></a></td>
    <td>A practice project exploring React for the frontend and Flask for the backend, focused on building and connecting full-stack applications.
 </td>
   </tr>
