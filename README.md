@@ -1,12 +1,18 @@
+<div align="center">
 <img src="banner.gif" alt="Animated Banner" style="width: 100%; height: auto;" />
 
 # Michelle Nguyen - Software Engineer
+ 
 ### 🌱 Becoming the person I needed when I was younger - one commit at a time
+### Check out my portfolio 👉 [michellenguyen.vercel.app](https://michellenguyen.vercel.app/)
 
+<br>
 Currently Listening To:
 <a href="https://github.com/kittinan/spotify-github-profile">
+<br>
 <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=1229106751&cover_image=true&theme=novatorem&show_offline=true&background_color=000000&interchange=false&bar_color=ffe4e1&bar_color_cover=false" alt="spotify-github-profile" />
 </a>
+</div>
 
 <a href="https://github.com/Michyelle" target="_blank">
  <img src="https://img.shields.io/badge/GitHub-@Michyelle-ffe4e1?logo=github&style=for-the-badge&labelColor=b79ea1"/>
@@ -37,7 +43,6 @@ Currently Listening To:
 
 ---
 
-
  <h3>Featured Projects</h3>
  <table>
   <tr>
@@ -61,16 +66,9 @@ Currently Listening To:
   </tr>
  </table>
 
- <img align="right" src="me.png" width="350" height="550" alt="Michelle ASCII portrait"/>
-
-  <h3>About Me</h3>
-  <ul>
-    <li>🎓 B.S. in Computer Science from CSUF</li>
-    <li>🛠 Mostly self-taught + passionate about building</li>
-    <li>🌐 Currently focused on <strong>full-stack development</strong></li>
-    <li>🤖 Big shoutout to AI for being my go-to mentor as I continue to learn and expand my knowledge</li>
-    <li>🫡 Always excited to dive into new tech and take on new challenges!</li>
-  </ul>
+<div align="center">
+<img width="800" height="550" alt="About me" src="https://github.com/user-attachments/assets/d519709d-f6db-41aa-8d68-4f27eeb41372" />
+</div>
 
   ### Programming Language:
   <p align="left">
@@ -187,4 +185,6 @@ Currently Listening To:
   <img src="https://visitor-badge.laobi.icu/badge?page_id=Michyelle.Michyelle" alt="Visitor Badge"/>
 </p>
 
+<div align="center">
 <img src="footer.gif" alt="Animated Footer" style="width: 100%; height: auto;" />
+</div>
