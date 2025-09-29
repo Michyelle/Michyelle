@@ -55,8 +55,8 @@ Currently Listening To:
 </td>
   </tr>
   <tr>
-   <td><a href="https://igdmdata.vercel.app/" target="_blank"><strong>Instagram DM Analyzer</strong></a></td>
-   <td>A client-side tool that processes exported Instagram DM data to generate insights and summaries. No data is stored, ensuring privacy and security.
+   <td><a href="https://miros.vercel.app/" target="_blank"><strong>Legado De Mi Tierra</strong></a></td>
+   <td>A responsive website built with React and Tailwind for a folklórico dance company, featuring modern design, accessibility, and tools to showcase classes and events.
 </td>
   </tr>
   <tr>
@@ -173,7 +173,7 @@ Currently Listening To:
 
 ### Employer?
 > [!IMPORTANT]  
-📄 [View My Resume](https://drive.google.com/file/d/11vufHrihALkUjJbXe8sLFUsmTj0HF3Tr/view?usp=sharing)
+📄 [View My Resume](https://drive.google.com/file/d/19HOSSc79LMRpu18SSXuRAwMFy_ffz8jw/view?usp=sharing)
 
 
 <a href="https://github.com/Michyelle/Michyelle/raw/main/MichelleNguyenResume.pdf" target="_blank">
